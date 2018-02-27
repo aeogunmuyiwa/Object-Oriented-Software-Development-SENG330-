@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+<html>
+	<body>
+		{% block content %}
+		<div class = "jumbotron text-center">
+			<h1>Delete Booking</h1>
+  				<form method="POST">
+    				{% csrf_token %}
+    				{% for field in form %}
+    					<p class="font-weight-bold">{{ field.label }} {{ field }}</p>
+    				{% endfor %}
+				<button type="button" class="btn btn-outline-primary">Delete</button>
+    			</form>
+			</div>
+			{% endblock %}
+		</div>
+	</body>
+</html>
